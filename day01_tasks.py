@@ -135,13 +135,13 @@ print("-----Bitwise XOR-----")
 a = 6 
 b = 3
 """ Here 6 bitwise  is 0110
-         3 bitwise is  0011  then when XOR is 5 (0101) 
+         3 bitwise is  0011  then when 
+             XOR is 5 (0101) 
           ' here same ^ same = 0 ,different ^ different = 1' """
 
 print(a ^ b)
 
 
-print()
 
 """----OUTPUT----
 -----Print Formatting-----
