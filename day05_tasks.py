@@ -16,7 +16,7 @@ users =[] # list is created to store the users input
 # input from users
 users.append(create_user("harsha",24,"Devops"))
 users.append(create_user("hari",22,"AI"))
-users.append(create_user("vicky",23,"Devloper"))
+users.append(create_user("vicky",23,"Developer"))
 
 # to print list an to access through the list for loop is used
 for user in users:
@@ -29,7 +29,7 @@ for user in users:
 
 {'name': 'Harsha', 'age': 24, 'role': 'Devops'}
 {'name': 'Hari', 'age': 22, 'role': 'AI'}
-{'name': 'Vicky', 'age': 23, 'role': 'Devloper'}
+{'name': 'Vicky', 'age': 23, 'role': 'Developer'}
 
 """
 
@@ -137,7 +137,7 @@ print(type(generator))
 <class 'generator'>
 
 """
-"""
+
 print()
 
 print("----- Task 6: Exception Handling Module -----  ")
@@ -165,7 +165,7 @@ def divide ():
 # calling function with out argumnets because we have asking user to enter inputs while executing
 divide()
 
-
+"""
 ----- OUTPUT -----
 ----- Task 6: Exception Handling Module -----  
 
