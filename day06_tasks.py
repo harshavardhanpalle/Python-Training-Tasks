@@ -108,6 +108,8 @@ Hello Temp Faculty
 
 """
 print()
+
+
 # TASK 3
 
 print("----- Task 3: Method Overriding ----- ")
@@ -146,6 +148,8 @@ Welcome Faculty
 """
 
 print()
+
+
 #TASK 4
 print("---- Task 4: Method Chaining ----")
 
@@ -177,6 +181,8 @@ registerd successfully
 
 """
 print()
+
+
 #TASK 5
 print(" ----- Task 5: Combined Task (Real-Time) -----")
 
@@ -191,7 +197,6 @@ class User:
         
     def get_username(self):
         return self.__username
-
     
     def register(self):
         print(self.__username,"registerd successfully")
