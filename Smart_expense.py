@@ -92,7 +92,6 @@ def add_user():
 def add_expense():
     conn = connect_db()
     cursor = conn.cursor()
-
     cursor.execute("SELECT * FROM users")
     users = cursor.fetchall()
 
@@ -105,7 +104,6 @@ def add_expense():
     category = input("Enter category: ")
     desc = input("Enter description: ")
     date = input("Enter date (YYYY-MM-DD): ")
-
     exp = Expense(uid, amount, category, desc, date)
     exp.save()
 
@@ -123,7 +121,6 @@ def view_expenses():
 
     cursor.execute(sql)
     rows = cursor.fetchall()
-
     print("\nAll Expenses:\n")
     for row in rows:
         print(row)
@@ -143,9 +140,7 @@ def filter_expenses():
     ]
 
     choice = input("Enter category: ")
-
     result = list(filter(lambda x: x["category"] == choice, expenses))
-
     print("\nFiltered result:")
     for r in result:
         print(r)
@@ -155,14 +150,10 @@ def filter_expenses():
 def total_expense():
     conn = connect_db()
     cursor = conn.cursor()
-
     cursor.execute("SELECT amount FROM expenses")
     rows = cursor.fetchall()
-
     amounts = list(map(lambda x: x[0], rows))
-
     total = reduce(lambda a, b: a + b, amounts, 0)
-
     print("\nTotal Expense:", total)
 
 
@@ -170,12 +161,9 @@ def total_expense():
 def category_wise():
     conn = connect_db()
     cursor = conn.cursor()
-
     cursor.execute("SELECT category, amount FROM expenses")
     rows = cursor.fetchall()
-
     expenses = [{"category": r[0], "amount": r[1]} for r in rows]
-
     categories = set(map(lambda x: x["category"], expenses))
 
     result = {
@@ -192,12 +180,9 @@ def category_wise():
 def highest_expense():
     conn = connect_db()
     cursor = conn.cursor()
-
     cursor.execute("SELECT amount FROM expenses")
     rows = cursor.fetchall()
-
     amounts = [x[0] for x in rows]
-
     high = reduce(lambda a, b: a if a > b else b, amounts)
 
     print("\nHighest Expense:", high)
@@ -207,7 +192,6 @@ def highest_expense():
 def monthly_report():
     conn = connect_db()
     cursor = conn.cursor()
-
     cursor.execute("SELECT date, amount FROM expenses")
     rows = cursor.fetchall()
 
