@@ -3,7 +3,7 @@
 
 #Create two variables a = 10 and b = 6.
 print()
-print("----- Bitwise Operator Tasks (1 - 8)-----")
+print("----- Bitwise Operator Tasks (1 - 8)-----")))
 a = 10
 b = 6
 print(a&b) # bitwise AND 10(1010)
